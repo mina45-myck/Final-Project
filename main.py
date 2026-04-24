@@ -1,3 +1,8 @@
+"""
+SmartCafe Management System
+Final Project - ICS Computer Science
+Developer: Minal
+"""
 from cafemanager import CafeManager
 from staff import Staff
 from customer import Customer
