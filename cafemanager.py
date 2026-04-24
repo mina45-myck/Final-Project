@@ -27,7 +27,7 @@ class CafeManager:
         for i, item in enumerate(self.menu, 1):
             print(f"{i}. {item.display()}")
         print("-----------------\n")
-        def add_item(self, name, price, category):
+    def add_item(self, name, price, category):
            try:
             new_item = MenuItem(name, price, category)
             self.menu.append(new_item)
@@ -35,3 +35,12 @@ class CafeManager:
             print(f"Added: {name} successfully!")
            except ValueError:
             print("Error: Price must be a number.")
+    def remove_item(self, item_name):
+        for item in self.menu:
+            if item.name.lower() == item_name.lower():
+                self.menu.remove(item)
+                self.save_menu()
+                print(f"Removed: {item_name} successfully!")
+                return
+        print(f"Error: {item_name} not found in menu.")       
+    
