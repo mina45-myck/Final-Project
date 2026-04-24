@@ -25,3 +25,6 @@ print("\nCustomer Details:")
 c1.display()
 
 print("\n=== ALL TESTS COMPLETE ===")
+print("\n--- Testing Search ---")
+cafe.search_item("Pizza")
+cafe.search_item("Burger")
