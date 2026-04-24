@@ -27,3 +27,11 @@ class CafeManager:
         for i, item in enumerate(self.menu, 1):
             print(f"{i}. {item.display()}")
         print("-----------------\n")
+        def add_item(self, name, price, category):
+           try:
+            new_item = MenuItem(name, price, category)
+            self.menu.append(new_item)
+            self.save_menu()
+            print(f"Added: {name} successfully!")
+           except ValueError:
+            print("Error: Price must be a number.")
