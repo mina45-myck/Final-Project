@@ -35,3 +35,8 @@ print("\n--- Fast Food Items ---")
 for item in cafe.menu:
     if item.category == "Fast Food":
         print(f"{item.name} - Rs.{item.price}")
+print("\n--- Total Menu Value ---")
+total = 0
+for item in cafe.menu:
+    total += item.price
+print(f"Total value of all items: Rs.{total}")
