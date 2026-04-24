@@ -1,0 +1,3 @@
+Coffee,150,Drinks
+Tea,80,Drinks
+Burger,300,Fast Food
