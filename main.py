@@ -31,3 +31,7 @@ cafe.search_item("Burger")
 print("\n--- Testing Update Price ---")
 cafe.update_price("Pizza", 500)
 cafe.display_menu()
+print("\n--- Fast Food Items ---")
+for item in cafe.menu:
+    if item.category == "Fast Food":
+        print(f"{item.name} - Rs.{item.price}")
