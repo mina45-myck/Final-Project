@@ -40,3 +40,5 @@ total = 0
 for item in cafe.menu:
     total += item.price
 print(f"Total value of all items: Rs.{total}")
+print("\n--- Menu Summary ---")
+print(f"Total items in menu: {len(cafe.menu)}")
