@@ -43,4 +43,10 @@ class CafeManager:
                 print(f"Removed: {item_name} successfully!")
                 return
         print(f"Error: {item_name} not found in menu.")       
-    
+        def search_item(self, name):
+          for item in self.menu:
+            if item.name.lower() == name.lower():
+                print(f"Found: {item.name} - Rs.{item.price} - {item.category}")
+                return item
+        print(f"Item '{name}' not found in menu")
+        return None
