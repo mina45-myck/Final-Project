@@ -14,3 +14,8 @@ class CafeManager:
             print("Menu loaded successfully!")
         except FileNotFoundError:
             print("No menu file found.")
+        def save_menu(self, filename="data/menu.txt"):
+          with open(filename, "w") as f:
+            for item in self.menu:
+                f.write(item.to_file_string() + "\n")
+        print("Menu saved to file!")
