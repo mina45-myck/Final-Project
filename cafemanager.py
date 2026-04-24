@@ -43,10 +43,22 @@ class CafeManager:
                 print(f"Removed: {item_name} successfully!")
                 return
         print(f"Error: {item_name} not found in menu.")       
-        def search_item(self, name):
+       
+    def search_item(self, name):
           for item in self.menu:
             if item.name.lower() == name.lower():
                 print(f"Found: {item.name} - Rs.{item.price} - {item.category}")
                 return item
-        print(f"Item '{name}' not found in menu")
-        return None
+            print(f"Item '{name}' not found in menu")
+            
+          return None
+    def update_price(self, name, new_price):
+        item = self.search_item(name)
+        if item:
+            old_price = item.price
+            item.price = new_price
+            self.save_menu()
+            print(f"Price updated: {name} Rs.{old_price} -> Rs.{new_price}")
+            return True
+        print(f"Cannot update. Item '{name}' not found")
+        return False
